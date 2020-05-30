@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="80" height="80" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+  <polyline points="23.7 17.8 40 29.4 56.3 17.8"
+      stroke="#fff" fill="transparent" stroke-width="6"/>
+
+  <polyline points="18 26 35 38 35 63.2"
+      stroke="#fff" fill="transparent" stroke-width="6"/>
+
+  <polyline points="62 26 45 38 45 63.2"
+      stroke="#fff" fill="transparent" stroke-width="6"/>
+
+</svg>

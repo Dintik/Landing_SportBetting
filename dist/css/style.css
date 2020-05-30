@@ -1,0 +1,365 @@
+@charset "UTF-8";
+*,
+.form__btn,
+a,
+applet,
+article,
+b,
+body,
+canvas,
+caption,
+center,
+div,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+i,
+p {
+  font-family: "Noto Sans", sans-serif;
+  color: #fff;
+  unicode-bidi: bidi-override;
+}
+
+.figure-bg {
+  position: absolute;
+}
+
+.logo {
+  display: flex;
+  width: 240px;
+  height: 80px;
+  border: 5px solid;
+  border-radius: 3px;
+}
+.logo__left {
+  width: 80px;
+  border-right: 5px solid;
+}
+.logo__right {
+  display: flex;
+  width: 155px;
+  align-items: center;
+}
+.logo__title {
+  font-size: 26px;
+  line-height: 1.2;
+  user-select: none;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-size: 36px;
+  font-weight: bold;
+  width: 400px;
+  height: 80px;
+  letter-spacing: 1.35px;
+  border-radius: 50px;
+  background: linear-gradient(89.2deg, #ffdc25 0.14%, rgba(255, 138, 0, 0.73) 99.29%), #ffd90f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.input {
+  font-size: 20px;
+  box-sizing: border-box;
+  height: 64px;
+  padding: 10px 25px;
+  text-align: right;
+  color: #fff;
+  border: 2px solid #366799;
+  border-radius: 8px;
+  background: #09223f;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.11);
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.header {
+  height: 666px;
+  background: url(../img/bg_header.jpg) no-repeat center top/cover;
+}
+.header__figure-bg--left {
+  top: 0px;
+  left: 130px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.header__figure-bg--left img:first-child {
+  position: absolute;
+  bottom: 136px;
+  left: -15px;
+}
+.header__figure-bg--right {
+  top: 114px;
+  right: 35px;
+}
+.header__girl {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+.header__girl::before {
+  content: url(../img/girl_left.png);
+  z-index: 1;
+  position: absolute;
+  left: 315px;
+}
+.header__girl::after {
+  content: url(../img/girl_right.png);
+  z-index: 1;
+  position: absolute;
+  right: 212px;
+}
+.header__content {
+  width: 400px;
+  z-index: 2;
+}
+.header__logo {
+  margin: auto;
+}
+
+.logo--white {
+  border-color: #fff;
+}
+.logo--white .logo__left {
+  border-color: #fff;
+}
+.logo--white .logo__title {
+  color: #fff;
+}
+
+.form__name {
+  width: 98%;
+  margin: 72px 0 21px 15px;
+}
+.form__text {
+  margin-bottom: 17px;
+  text-align: center;
+}
+.form__phone {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.form .phone-input__number {
+  width: 100%;
+  flex-basis: 54.75%;
+}
+.form .phone-input__divider {
+  width: 100%;
+  flex-basis: 39.25%;
+}
+.form__privacy {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  margin-right: -6px;
+}
+.form__btn {
+  margin-top: 47px;
+  margin-bottom: 82px;
+  margin-left: 8px;
+}
+
+.advantages-bg {
+  background: url(../img/bg_advantages.png) left 5%/15% 100% repeat-x;
+  height: 248px;
+  width: 100%;
+  margin-top: -2px;
+}
+
+.advantages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.advantages__unit {
+  width: 320px;
+  box-sizing: border-box;
+  padding: 47px 64px;
+  text-align: center;
+}
+.advantages__title {
+  font-weight: bold;
+  font-size: 28px;
+}
+.advantages__img {
+  margin: 15px;
+}
+.advantages__description {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bonus {
+  position: relative;
+  height: 550px;
+  background: url(../img/bg_bonus.png) no-repeat center top/cover;
+}
+.bonus__figure-bg--left {
+  top: 46px;
+  left: 382px;
+}
+.bonus__figure-bg--left img:last-child {
+  position: absolute;
+  top: 69px;
+  left: -140px;
+}
+.bonus__main {
+  padding-top: 40px;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+.bonus__title {
+  font-weight: bold;
+  font-size: 40px;
+}
+.bonus__pointer {
+  margin-top: 60px;
+}
+.bonus__value {
+  margin-bottom: 35px;
+}
+.bonus__btn {
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  line-height: 80px;
+}
+.bonus__figure-bg--right {
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  right: 53px;
+}
+.bonus__figure-bg--right img:first-child {
+  width: fit-content;
+}
+
+.color-gold {
+  color: #FFC807;
+}
+
+.footer {
+  background-color: #000D21;
+  height: 376px;
+}
+.footer__main {
+  width: 63.3%;
+  margin: auto;
+  padding: 32px 0 24px 0;
+}
+.footer__icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 32px 0;
+  border-top: 1px solid #423A4D;
+  border-bottom: 1px solid #423A4D;
+}
+.footer__logos {
+  display: flex;
+  flex-direction: column;
+}
+.footer__logos img:first-child {
+  margin-bottom: 16px;
+}
+.footer__icon {
+  display: flex;
+  flex-wrap: wrap;
+  width: 488px;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.footer__icon img {
+  width: 32%;
+}
+.footer__article {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+}
+
+.logo--pink {
+  border-color: #EC1E82;
+}
+.logo--pink .logo__left {
+  border-color: #EC1E82;
+}
+.logo--pink .logo__title {
+  color: #EC1E82;
+  margin: auto;
+}
+
+.logo--gold {
+  border-color: #FFC807;
+}
+.logo--gold .logo__left {
+  border-color: #FFC807;
+}
+.logo--gold .logo__title {
+  color: #FFC807;
+  margin: auto;
+}
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox > span {
+  display: inline-flex;
+  user-select: none;
+  align-items: center;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox > span::after {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  margin-left: 16px;
+  content: "";
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox > input:checked + span::after {
+  margin-left: 16px;
+  border-color: #ffc800;
+  background-color: #ffc800;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23000' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox > input:disabled + span::after {
+  background-color: #e9ecef;
+}
