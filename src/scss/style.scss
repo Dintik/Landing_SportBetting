@@ -37,14 +37,13 @@ p{
 }
 .logo{
     display: flex;
-
-    width: 240px;
-    height: 80px;
+    width: 230px;
+    height: 70px;
 
     border: 5px solid;
     border-radius: 3px;
     &__left{
-        width: 80px;
+        width: 75px;
 
         border-right: 5px solid;
     }
@@ -143,6 +142,7 @@ p{
     }
 }
 .logo--white{
+
 	border-color: #fff;
 	.logo__left{
 		border-color: #fff;
@@ -153,26 +153,30 @@ p{
 }
 .form{
     &__name{
-        width: 98%;
-        margin: 72px 0 21px 15px;
+        width: 96.5%;
+        margin: 72px 0 30px 15px;
+        direction: ltr;
     }
     &__text{
-        margin-bottom: 17px;
-
+        margin-bottom: 30px;
+        margin-left: 15px;
+		font-size: 20px;
         text-align: center;
     }
     &__phone{
+    	width: 96.5%;
+    	margin-left: 15px;
         margin-bottom: 16px;
         display: flex;
         justify-content: space-between;
     }
     .phone-input__number{
     	width: 100%;
-		flex-basis: 54.75%;
+		flex-basis: 56.75%;
     }
     .phone-input__divider{
     	width: 100%;
-    	flex-basis: 39.25%;
+    	flex-basis: 40.5%;
 	}
     &__privacy{
     	display: block;
@@ -204,7 +208,7 @@ p{
 	&__unit {
 		width: 320px;
 		box-sizing: border-box;
-		padding: 47px 64px;
+		padding: 35px 64px 0 64px;
 		text-align: center;
 	}
 	&__title {
@@ -212,7 +216,7 @@ p{
 		font-size: 28px;
 	}
 	&__img {
-		margin: 15px;
+		margin: 23px 0;
 	}
 	&__description {
 		font-weight: bold;
@@ -227,10 +231,10 @@ p{
 // block-3
 .bonus {
 	position: relative;
-	height: 550px;
+	height: 545px;
     background: url(../img/bg_bonus.png) no-repeat center top / cover;
 	&__figure-bg--left {
-		top: 46px;
+		top: 40px;
 		left: 382px;
 	}
 	&__figure-bg--left img:last-child{
@@ -239,20 +243,22 @@ p{
 		left: -140px;
 	}
 	&__main {
-		padding-top: 40px;
+		padding-top: 53px;
 		width: fit-content;
 		margin: auto;
 		text-align: center;
+		padding-left: 13px;
 	}
 	&__title {
 		font-weight: bold;
 		font-size: 40px;
 	}
 	&__pointer {
-		margin-top: 60px;
+		margin-top: 52px;
 	}
 	&__value {
-		margin-bottom: 35px;
+		margin-bottom: 33px;
+		padding-left: 12px;
 	}
 	&__btn {
 		display: block;
@@ -263,8 +269,8 @@ p{
 	&__figure-bg--right {
 		display: flex;
 		flex-direction: column;
-		top: 60px;
-		right: 53px;
+		top: 52px;
+		right: 15px;
 	}
 	&__figure-bg--right img:first-child{
 		width: fit-content;
@@ -286,16 +292,16 @@ p{
 	background-color: #000D21;
 	height: 376px;
 	&__main {
-		width: 63.3%;
+		width: 64%;
 		margin: auto;
-		padding: 32px 0 24px 0;
+		padding: 31px 0 0 20px;
 	}
 	&__icons {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin-bottom: 24px;
-		padding: 32px 0;
+		padding: 32px 0 33px 0;
 		border-top: 1px solid #423A4D;
 		border-bottom: 1px solid #423A4D;
 	}
@@ -310,43 +316,19 @@ p{
 	&__icon{
 		display: flex;
 		flex-wrap: wrap;
-		width: 488px;
-
+		width: 490px;
+		height: 150px;
 		align-content: space-between;
 		justify-content: space-between;
 	}
 	&__icon img{
-		width: 32%;
+		width: 31%;
 	}
-	&__article {
+	&__article p{
 		font-size: 10px;
 		line-height: 14px;
 		letter-spacing: 0.4px;
-	}
-}
-.logo {
-	&__left {}
-	&__right {}
-	&__title {}
-}
-.logo--pink {
-	border-color: #EC1E82;
-	.logo__left{
-		border-color: #EC1E82;
-	}
-	.logo__title{
-		color: #EC1E82;
-		margin: auto;
-	}
-}
-.logo--gold {
-	border-color: #FFC807;
-	.logo__left{
-		border-color: #FFC807;
-	}
-	.logo__title{
-		color: #FFC807;
-		margin: auto;
+		color: #ccc;
 	}
 }
 
