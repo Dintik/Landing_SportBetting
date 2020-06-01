@@ -7,11 +7,16 @@ let flagLogo = document.querySelector(".flag");
 
 inputFlag.innerHTML = inputFlagHide.value;
 
-inputFlagHide.addEventListener("click", () => {
+inputFlagHide.addEventListener("change", () => {
 	let flagCountry = inputFlagHide.options[inputFlagHide.selectedIndex].getAttribute('data');
-	flagVector.classList.toggle("input__flag--clicked");
 	flagLogo.src = `img/flag/flag-${flagCountry}.png`;
 	inputFlag.innerHTML = inputFlagHide.value;
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    	flagVector.classList.toggle("input__flag--clicked");
+	}
+});
+inputFlagHide.addEventListener("click", () => {
+	flagVector.classList.toggle("input__flag--clicked");
 });
 }
 showFlagValue();
@@ -27,3 +32,4 @@ phoneInput.addEventListener("keypress", e => {
     e.preventDefault();
 });
 // (end) validation test phoneInput
+
