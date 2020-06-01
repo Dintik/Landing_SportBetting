@@ -187,15 +187,105 @@ p {
   margin-left: 8px;
 }
 
+.form__select-fix {
+  position: relative;
+  width: 40.5%;
+}
+
+.phone-input__divider .phone-input__divider {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.input__select {
+  opacity: 0%;
+}
+
+.input__flag {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 41px;
+  font-size: 24px;
+}
+
+.input__flag::before {
+  position: absolute;
+  left: 15px;
+  content: url(../img/flag/Vector.png);
+  transform: rotate(0);
+  top: 12%;
+}
+
+.input__flag.input__flag--clicked:before {
+  transform: rotate(180deg);
+  top: 22%;
+}
+
+.flag {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+}
+
 .girl-img {
   display: none;
+}
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox > span {
+  display: inline-flex;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  align-items: center;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox > span::after {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  margin-left: 16px;
+  content: "";
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox > input:checked + span::after {
+  margin-left: 16px;
+  border-color: #ffc800;
+  background-color: #ffc800;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23000' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox > input:disabled + span::after {
+  background-color: #e9ecef;
 }
 
 .advantages-bg {
   width: 100%;
   height: 248px;
   margin-top: -2px;
-  background: url(../img/bg_advantages.png) left 5%/15% 100% repeat-x;
+  background: url(../img/bg_advantages.png) left 5%/17% 100% repeat-x;
 }
 
 .advantages {
@@ -205,8 +295,8 @@ p {
 }
 .advantages__unit {
   box-sizing: border-box;
-  width: 320px;
-  padding: 35px 64px 0 64px;
+  width: 307px;
+  padding-top: 35px;
   text-align: center;
 }
 .advantages__title {
@@ -214,9 +304,10 @@ p {
   font-weight: bold;
 }
 .advantages__img {
-  margin: 23px 0;
+  margin: 23px 0 13px;
 }
 .advantages__description {
+  line-height: 145%;
   font-size: 14px;
   font-weight: bold;
 }
@@ -256,7 +347,7 @@ p {
   padding-left: 12px;
 }
 .bonus__btn {
-  line-height: 80px;
+  line-height: 73px;
   display: block;
   margin: auto;
   text-decoration: none;
@@ -318,99 +409,6 @@ p {
   line-height: 14px;
   letter-spacing: 0.4px;
   color: #ccc;
-}
-
-/* для элемента input c type="checkbox" */
-.custom-checkbox > input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-/* для элемента label, связанного с .custom-checkbox */
-.custom-checkbox > span {
-  display: inline-flex;
-  -webkit-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  align-items: center;
-}
-
-/* создание в label псевдоэлемента before со следующими стилями */
-.custom-checkbox > span::after {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-right: 0.5em;
-  margin-left: 16px;
-  content: "";
-  border: 1px solid #adb5bd;
-  border-radius: 0.25em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
-
-/* стили для чекбокса, находящегося в состоянии checked */
-.custom-checkbox > input:checked + span::after {
-  margin-left: 16px;
-  border-color: #ffc800;
-  background-color: #ffc800;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23000' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-}
-
-/* стили для чекбокса, находящегося в состоянии disabled */
-.custom-checkbox > input:disabled + span::after {
-  background-color: #e9ecef;
-}
-
-.form__select-fix {
-  position: relative;
-  width: 40.5%;
-}
-
-.phone-input__divider .phone-input__divider {
-  position: absolute;
-  top: 0;
-  z-index: 2;
-}
-
-.input__select {
-  opacity: 0%;
-}
-
-.input__flag {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  line-height: 40px;
-  text-align: left;
-  padding-left: 35px;
-}
-
-.input__flag::before {
-  position: absolute;
-  left: 15px;
-  content: url(../img/flag/Vector.png);
-  transform: rotate(0);
-  top: 12%;
-}
-
-.input__flag.input__flag--clicked:before {
-  transform: rotate(180deg);
-  top: 22%;
-}
-
-.flag {
-  position: absolute;
-  right: 10%;
-  top: 30%;
-}
-
-input:focus {
-  outline: none;
 }
 
 @media only screen and (max-width: 1830px) {
@@ -576,15 +574,28 @@ input:focus {
   }
 
   .header__content {
-    padding-right: 5px;
+    padding-right: 13px;
   }
 
   .form__btn {
-    margin-top: 54px;
+    padding-bottom: 15px;
+    margin: 49px 0 87px 6px;
+  }
+
+  .form__select-fix {
+    width: 41.5%;
   }
 
   .form__name {
     margin-top: 64px;
+  }
+
+  .custom-checkbox > span::after {
+    margin-left: 8px;
+  }
+
+  .custom-checkbox > input:checked + span::after {
+    margin-left: 8px;
   }
 
   .girl-img {
@@ -690,6 +701,10 @@ input:focus {
     height: auto;
   }
 
+  .footer__article {
+    width: 98%;
+  }
+
   .footer__logos {
     flex-direction: row;
     width: 100%;
@@ -774,14 +789,6 @@ input:focus {
   }
 }
 @media only screen and (max-width: 480px) {
-  .form .phone-input__number {
-    flex-basis: 61.75%;
-  }
-
-  .form .phone-input__divider {
-    flex-basis: 35.5%;
-  }
-
   .header__content {
     width: 80%;
   }
@@ -806,8 +813,17 @@ input:focus {
     padding: 10px 10px;
   }
 
+  .form__select-fix {
+    width: 42.5%;
+  }
+
+  .input__flag::before {
+    left: 5px;
+  }
+
   .phone-input__divider {
-    padding-left: 20px;
+    padding-left: 25px;
+    padding-top: 9px;
   }
 
   .advantages__unit {
@@ -819,6 +835,40 @@ input:focus {
   }
 }
 @media only screen and (max-width: 380px) {
+  .header__logo {
+    margin-bottom: 55px;
+  }
+
+  .form__phone {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .form__select-fix {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .form .phone-input__number {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .form .input__flag {
+    text-align: end;
+    padding-right: 80px;
+    padding-top: 9px;
+  }
+
+  .input__flag::before {
+    left: 15px;
+  }
+
+  .form__btn {
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+
   .form__respon-bg {
     top: 29%;
     height: 465px;
@@ -855,11 +905,6 @@ input:focus {
     height: 800px;
   }
 
-  .form__phone {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
   .phone-input__divider {
     font-size: 26px;
   }
@@ -889,6 +934,10 @@ input:focus {
     height: 764px;
   }
 
+  .header__logo {
+    margin-bottom: 20px;
+  }
+
   .header__content {
     width: 90%;
   }
@@ -896,11 +945,6 @@ input:focus {
   .form__respon-bg {
     top: 50%;
     height: 310px;
-  }
-
-  .form__btn {
-    margin-top: 24px;
-    margin-bottom: 40px;
   }
 
   .phone-input__number {
