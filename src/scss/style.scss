@@ -220,8 +220,6 @@ p
     .phone-input__divider
     {
         width: 100%;
-
-        flex-basis: 40.5%;
     }
     &__privacy
     {
@@ -494,6 +492,46 @@ p
 
 
 
+.form__select-fix{
+	position: relative;
+	width: 40.5%;
+}
+.phone-input__divider .phone-input__divider{
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+.input__select{
+	opacity: 0%;
+}
+.input__flag{
+	position: absolute;
+	top: 0;
+	z-index: -1;
+    line-height: 40px;
+    text-align: left;
+    padding-left: 35px;
+}
+.input__flag::before{
+    position: absolute;
+    left: 15px;
+    content: url(../img/flag/Vector.png);
+    transform: rotate(0);
+    top: 12%;
+}
+.input__flag.input__flag--clicked:before {
+    transform: rotate(180deg);
+    top: 22%;
+}
+.flag{
+	position: absolute;
+    right: 10%;
+    top: 30%;
+}
+
+
+
+input:focus{outline: none;}
 
 @media only screen and (max-width : 1920px)
 {

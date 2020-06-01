@@ -29,18 +29,22 @@
 				</div>
 
 				<div class="form__respon-bg"></div>
-				<form action="index.html" class="form">
-					<input type="text" class="form__name input" placeholder="لماكلا كمسا">
+				<form action="#" class="form" id="regForm" method="get">
+					<input type="text" class="form__name input" name="name" maxlength="30" placeholder="لماكلا كمسا" required>
 					<p class="form__text">كب صاخلا فتاهلا مقرو</p>
 					<div class="form__phone phone-input">
-						<input type="text" class="input phone-input__number" placeholder="________-_____-_____">
-						<select class="input phone-input__divider">
-							<option>+971</option>
-							<option>more..</option>
-						</select>
+						<input id="phoneInput" name="phone" maxlength="13" type="text" class="input phone-input__number" placeholder="________-_____-_____" required>
+						<div class="form__select-fix">
+							<div id="inputFlag" class="input phone-input__divider input__flag"></div>
+							<img src="img/flag/flag-ae.png" class="flag"></img>
+							<select id="inputFlagHide" name="code" class="input phone-input__divider input__select">
+								<option data="ae">+971</option>
+								<option data="ua">+380</option>
+							</select>
+						</div>
 					</div>
 					<label class="form__privacy custom-checkbox">
-						<input type="checkbox" value="value-1">
+						<input type="checkbox" value="value-1" required>
 						<span> * .اًمﺎﻋ 18 يﺮﻤﻋ ﻦﻣ ﺮﺜﻛأ ﺪﻴﻛﺄﺘﻟاو ﺔﻴﺻﻮﺼﺨﻟا ﺔﺳﺎﻴﺳو </span>
 					</label>
 					<input type="submit" class="btn form__btn" value=" ناهر عض ">
@@ -142,5 +146,6 @@
 		</article>
 	</div>
 </footer>
+<script src="js/main.js"></script>
 </body>
 </html>
