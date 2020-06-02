@@ -18,6 +18,9 @@ inputFlagHide.addEventListener("change", () => {
 inputFlagHide.addEventListener("click", () => {
 	flagVector.classList.toggle("input__flag--clicked");
 });
+inputFlagHide.addEventListener("blur", () => {
+	flagVector.classList.toggle("input__flag--clicked");
+});
 }
 showFlagValue();
 // (end) show form flag
